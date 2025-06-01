@@ -1,22 +1,40 @@
-# ser-model
- A machine learning-based emotion classifier that detects human emotions from voice recordings using audio feature extraction and classification algorithms.
-# Emotion Classifier
+# 🎵 Voice Emotion Detection using RAVDESS
 
-This project implements an **Emotion Classifier** that detects human emotions from audio input. Using machine learning techniques, the model analyzes voice recordings to classify emotions such as happy, sad, angry, neutral, and more.
+A machine learning project that detects human emotions (Neutral, Calm, Happy, Sad, Angry) from voice recordings using the RAVDESS dataset. The project extracts meaningful audio features using `librosa`, applies data augmentation, and uses the powerful `XGBoost` classifier for emotion classification.
 
-## Features
-- **Input:** Voice/audio recordings
-- **Preprocessing:** Extracts features like Mel-frequency cepstral coefficients (MFCCs) from audio
-- **Model:** Utilizes machine learning algorithms (e.g., Random Forest, MLP) for classification
-- **Output:** Predicts the emotional state with confidence scores
-- **Use Cases:** Can be used in mental health apps, customer support systems, voice assistants, and interactive entertainment
+ 
 
-## Technologies Used
-- Python
-- Librosa (for audio feature extraction)
-- Scikit-learn / TensorFlow / PyTorch (for model building)
-- Flask (optional, for API deployment)
+## 📌 Project Highlights
 
----
+- 🎙️ Audio-based emotion classification
+- 🎯 5 filtered emotions: **Neutral, Calm, Happy, Sad, Angry**
+- 🔊 Feature extraction using **MFCC**, Chroma, Mel Spectrogram, Spectral Contrast, ZCR
+- 🔁 Data augmentation (noise injection & speed variation)
+- 🚀 Trained using **XGBoost** with hyperparameter tuning
+- 📈 Achieved up to **90% accuracy**
+- 💾 Model and label encoder are saved and reusable
+- 🧪 Simple prediction interface for new audio samples
 
-Feel free to explore the code, test with your own audio samples, and contribute to improving the model!
+ 
+## 📂 Dataset
+
+- **RAVDESS**: Ryerson Audio-Visual Database of Emotional Speech and Song  
+- Format: `.wav` audio files  
+- Used only **speech audio** files  
+- [RAVDESS Info](https://zenodo.org/record/1188976)
+
+ 
+## 🧠 Technologies Used
+
+| Category           | Tools/Packages                        |
+|--------------------|----------------------------------------|
+| Language           | Python                                 |
+| Audio Processing   | Librosa, NumPy                         |
+| Machine Learning   | XGBoost, scikit-learn                  |
+| Data Augmentation  | Custom augmentation (noise, speed)     |
+| Evaluation         | Accuracy, Confusion Matrix, F1 Score   |
+| Visualization      | Matplotlib                             |
+| Model Saving       | Joblib                                 |
+
+ 
+ 
